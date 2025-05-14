@@ -43,7 +43,7 @@ export DATABUCKET="dataset"
 # Configure dataset bucket name to use.
 
 # start transfer
-go run main.go -d "HuggingFaceFW/fineweb-edu-score-2" --r2 --skip-local -c $CPUCOUNT  --branch v1.2.0 --r2-bucket $DATABUCKET
+go run main.go -d "HuggingFaceFW/fineweb-edu-score-2" --r2 --skip-local -c $CPUCOUNT  --branch v1.2.0 --r2-bucket $DATABUCKET --r2-subfolder "HuggingFaceFW_fineweb-edu-score-2"
 
 # check corrupted files
 go run main.go -d "HuggingFaceFW/fineweb-edu-score-2" --r2 --cleanup-corrupted --branch v1.2.0 --r2-bucket $DATABUCKET
